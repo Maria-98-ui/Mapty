@@ -17,6 +17,14 @@ const inputDuration = document.querySelector('.form__input--duration');
 const inputCadence = document.querySelector('.form__input--cadence');
 const inputElevation = document.querySelector('.form__input--elevation');
 
+//buttons
+
+const clearAll = document.querySelector('.deleteAll');
+const clearAllCard = document.querySelector('.deleteAllCard');
+const overlay = document.querySelector('.overlay');
+const confirmBtn = document.querySelector('.confirmBtn');
+const noBtn = document.querySelector('.noBtn');
+
 
 // using geolocation API --browser
 
@@ -364,7 +372,30 @@ class App{
     }
 }
 
+
+
 const app = new App();
+
+const showCard = function(){
+    clearAllCard.classList.remove('hide');
+    overlay.classList.remove('hide');
+
+    confirmBtn.addEventListener('click', function(){
+        app.reset();
+    })
+
+    noBtn.addEventListener('click', function(){
+        clearAllCard.classList.add('hide');
+        overlay.classList.add('hide');
+    }) 
+}
+//btn - clearAll
+
+clearAll.addEventListener('click', function(){
+    showCard();
+})
+
+
 
 
 //** 1.ability to edit a workout

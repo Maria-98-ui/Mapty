@@ -22,11 +22,10 @@
   </head> 
   <body>
     <div class="sidebar">
-      <div class="buttons">
-          <button class="deleteAll">Clear All</button>
-
-      </div>
       <img src="logo.png" alt="Logo" class="logo" />
+      <div class="buttons">
+        <button class="deleteAll">Clear All</button>
+    </div>
 
       <ul class="workouts">
         <form class="form hidden">
@@ -126,6 +125,19 @@
       </p> -->
     </div>
 
+    <div class="deleteAllCard hide">
+      <img class= "warnIcon" src="warning (1).png">
+      <p class="heading">Delete All Your Workouts</p>
+      <p class="desc"> Are you sure you want to delete your workouts log? 
+        <br>This action cannot be undone.</p>
+      <div class="btnContainer">
+        <button class="confirmBtn">Confirm</button>
+        <button class="noBtn">go back</button>
+      </div>
+
+    </div>
+
     <div id="map"></div>
+    <div class="overlay hide "></div>
   </body>
 </html>
