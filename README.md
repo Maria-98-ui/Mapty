@@ -1,2 +1,1 @@
-# Mapty
-Workouts made easy
+# Mapty - Mavigate Your Workout
