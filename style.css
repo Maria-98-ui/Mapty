@@ -110,12 +110,12 @@ a:visited {
 .workout {
   background-color: var(--color-dark--2);
   border-radius: 5px;
-  padding: 1.5rem 2.25rem;
+  padding: 1.9rem 2.25rem;
   margin-bottom: 1.75rem;
   cursor: pointer;
 
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 2fr 2fr 2fr;
   gap: 0.75rem 1.5rem;
 }
 .workout--running {
@@ -152,6 +152,29 @@ a:visited {
   color: var(--color-light--1);
   text-transform: uppercase;
   font-weight: 800;
+}
+
+.deleteWorkoutBtn{
+    position: fixed;
+    
+    width: 1%;
+    font-size: 13px;  /* Adjust the size of the icon */
+    color: white;     /* Icon color */
+    background-color: var(--color-dark--2);  /* Button background color */
+    padding: 1px;    /* Padding around the icon */
+    border: none;     /* Remove borders */
+    border-radius: 10%; /* Make it circular */
+    cursor: pointer;  /* Cursor changes to pointer on hover */
+    display: flex; /* Align the icon properly */
+    justify-content: center; /* Center the icon */
+    align-items: center;
+    margin-left: 344px;
+    top: 21rem;
+    /* bottom: 10%; */
+  
+}
+.deleteWorkoutBtn:hover{
+  color: var(--color-brand--2);
 }
 
 .form {
@@ -350,7 +373,7 @@ a:visited {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(1px);
+  backdrop-filter: blur(.12px);
   z-index: 5;
 }
 

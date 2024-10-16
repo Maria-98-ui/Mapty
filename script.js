@@ -267,7 +267,9 @@ class App{
     _renderWorkout(workout){
         let html = ` 
         <li class="workout workout--${workout.type}"     data-id="${workout.id}">
-          <h2 class="workout__title">${workout.description}</h2>
+            <i class="fa-solid fa-trash deleteWorkoutBtn"></i>
+            <h2 class="workout__title">${workout.description} </h2>
+        
           <div class="workout__details">
             <span class="workout__icon">${workout.type === 'running' ? '🏃‍♂️' : '🚴‍♀️'}</span>
             <span class="workout__value">${workout.distance}</span>
@@ -366,28 +368,43 @@ class App{
 
     }
 
+    // deleteworkout(){
+    //     const workEl = e.target.closest('.workout');
+
+    //     if(!workEl) return;
+
+        
+
+
+    // }
     reset(){
+
         localStorage.removeItem('workout');
         location.reload();
     }
 }
 
-
-
 const app = new App();
 
 const showCard = function(){
+
+    //if no workouts
+
+    if(localStorage.length === 0) return;
+
+    
     clearAllCard.classList.remove('hide');
     overlay.classList.remove('hide');
 
     confirmBtn.addEventListener('click', function(){
-        app.reset();
+            app.reset();
     })
 
     noBtn.addEventListener('click', function(){
-        clearAllCard.classList.add('hide');
-        overlay.classList.add('hide');
+            clearAllCard.classList.add('hide');
+            overlay.classList.add('hide');
     }) 
+
 }
 //btn - clearAll
 
